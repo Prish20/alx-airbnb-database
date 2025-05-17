@@ -36,3 +36,19 @@ Write both correlated and non-correlated subqueries.
 
 * Queries executed successfully in PostgreSQL.
 * Outputs verified and match expected results.
+
+## Task 2: Aggregations and Window Functions
+
+### Objective (Task 2)
+
+Use SQL aggregation and window functions to analyze data.
+
+### Implemented Queries (Task 2)
+
+1. **Aggregation:** Find the total number of bookings made by each user using COUNT and GROUP BY.
+2. **Window Function:** Rank properties based on the total number of bookings using RANK().
+
+### Results (Task 2)
+
+* Queries executed successfully in PostgreSQL.
+* Outputs verified and match expected results.
