@@ -20,14 +20,15 @@
       - Ordering results for better usability.
       - Using EXPLAIN ANALYZE for performance diagnostics.
 */
+
 -- Initial Complex Query
 SELECT b.booking_id, b.start_date, b.end_date, b.total_price, b.status,
        u.first_name, u.last_name, u.email,
        p.name AS property_name, p.location, p.pricepernight,
        py.amount, py.payment_date, py.payment_method
 FROM bookings b
-JOIN users u ON b.user_id = u.user_id
-JOIN properties p ON b.property_id = p.property_id
+JOIN users u ON b.user_id = u.user_id AND b.status IS NOT NULL
+JOIN properties p ON b.property_id = p.property_id AND p.location IS NOT NULL
 LEFT JOIN payments py ON b.booking_id = py.booking_id;
 
 -- Optimized Query
