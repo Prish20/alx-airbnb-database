@@ -12,7 +12,8 @@ INNER JOIN users u ON b.user_id = u.user_id;
 
 SELECT p.name AS property_name, r.comment
 FROM properties p
-LEFT JOIN reviews r ON p.property_id = r.property_id;
+LEFT JOIN reviews r ON p.property_id = r.property_id
+ORDER BY p.name;
 -- This query retrieves property names and their associated reviews
 -- by performing a left join on the properties and reviews tables.
 -- It ensures that all properties are listed, even if they have no reviews.
